@@ -130,16 +130,50 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="hjD-ga-3SR"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="CloudUpload" id="3ma-av-axT"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEe-Si-idA">
+                                <rect key="frame" x="74" y="152" width="227" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="E3e-Iq-CmR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sqc-ha-Bcg">
+                                <rect key="frame" x="74" y="190" width="227" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="jkl-kj-YOl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password :" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0d-pc-Lju">
+                                <rect key="frame" x="74" y="228" width="227" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="227" id="XKX-Sa-QuF"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qaO-fm-y9r" firstAttribute="trailing" secondItem="jXr-5f-cJk" secondAttribute="trailing" id="HqQ-SD-sjf"/>
+                            <constraint firstItem="zEe-Si-idA" firstAttribute="centerX" secondItem="R2s-CF-IX4" secondAttribute="centerX" id="LWi-vj-suv"/>
+                            <constraint firstItem="zEe-Si-idA" firstAttribute="top" secondItem="Aga-Vj-n8j" secondAttribute="bottom" constant="64" id="TNo-h3-teY"/>
                             <constraint firstItem="Aga-Vj-n8j" firstAttribute="trailing" secondItem="jXr-5f-cJk" secondAttribute="trailing" id="WUM-VU-2eE"/>
                             <constraint firstItem="Aga-Vj-n8j" firstAttribute="top" secondItem="jXr-5f-cJk" secondAttribute="top" id="Xya-Fu-xny"/>
+                            <constraint firstItem="Sqc-ha-Bcg" firstAttribute="top" secondItem="zEe-Si-idA" secondAttribute="bottom" constant="8" id="ZxI-jw-5oo"/>
+                            <constraint firstItem="C0d-pc-Lju" firstAttribute="centerX" secondItem="R2s-CF-IX4" secondAttribute="centerX" id="bGf-kG-9eh"/>
+                            <constraint firstItem="Sqc-ha-Bcg" firstAttribute="centerX" secondItem="R2s-CF-IX4" secondAttribute="centerX" id="dWf-px-6vm"/>
                             <constraint firstItem="qaO-fm-y9r" firstAttribute="leading" secondItem="jXr-5f-cJk" secondAttribute="leading" id="dt9-N5-I2I"/>
+                            <constraint firstItem="C0d-pc-Lju" firstAttribute="top" secondItem="Sqc-ha-Bcg" secondAttribute="bottom" constant="8" id="epI-TX-9Hq"/>
                             <constraint firstItem="qaO-fm-y9r" firstAttribute="top" secondItem="jXr-5f-cJk" secondAttribute="top" id="iOe-5L-8WT"/>
                             <constraint firstItem="Aga-Vj-n8j" firstAttribute="leading" secondItem="jXr-5f-cJk" secondAttribute="leading" id="p36-b9-6Y3"/>
                             <constraint firstItem="qaO-fm-y9r" firstAttribute="bottom" secondItem="jXr-5f-cJk" secondAttribute="bottom" id="rgo-f3-jhd"/>
@@ -154,6 +188,7 @@
     </scenes>
     <resources>
         <image name="ArrowBack" width="108" height="108"/>
+        <image name="CloudUpload" width="108" height="108"/>
         <image name="Logo" width="128" height="128"/>
         <image name="Wallpaper" width="3024" height="4032"/>
         <image name="Wallpaper2" width="5760" height="3840"/>
