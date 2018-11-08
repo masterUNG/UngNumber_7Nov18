@@ -127,7 +127,7 @@
                                     <navigationItem title="Title" id="2mA-RR-O0h">
                                         <barButtonItem key="leftBarButtonItem" title="Item" image="ArrowBack" id="sVf-W4-33H">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="hjD-ga-3SR"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="BackMain" id="hjD-ga-3SR"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="CloudUpload" id="3ma-av-axT">

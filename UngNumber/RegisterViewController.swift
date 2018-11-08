@@ -63,8 +63,42 @@ class RegisterViewController: UIViewController {
         let urlString: String = myClass.findUrlAddUser(myName: myName, myUser: myUser, myPassword: myPassword)
         print("urlString ==> \(urlString)")
         
-        
+        let urlPHP = URL(string: urlString)
+        let request = NSMutableURLRequest(url: urlPHP!)
+        let task = URLSession.shared.dataTask(with: request as URLRequest) { (data, response, error) in
+            
+//            Check Success
+            if (error != nil) {
+                print("Have Error")
+            } else {
+                
+                if let myReadData = data {
+                    
+                    let canReadData = NSString(data: myReadData, encoding: String.Encoding.utf8.rawValue)
+                    
+                    let resultString: String = canReadData! as String
+                    print("resultString ==> \(resultString)")
+                    
+                    if (Bool(resultString)!) {
+                        
+                        DispatchQueue.main.async {
+                            self.backMain()
+                        }
+                        
+                    } else {
+                        print("Cannot Upload")
+                    }
+                    
+                    
+                }   // if1
+            }   //if1
+        }   // task
+        task.resume()
     }   // addUser
+    
+    func backMain() -> Void {
+        performSegue(withIdentifier: "BackMain", sender: self)
+    }
     
     
     func myAlertDialog(titleString: String, messageString: String) -> Void {
