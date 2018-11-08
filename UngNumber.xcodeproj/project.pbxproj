@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C43A0DB72193EA6000E41B6C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43A0DB62193EA6000E41B6C /* RegisterViewController.swift */; };
 		C4C0FA022192CD36004D7C94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0FA012192CD36004D7C94 /* AppDelegate.swift */; };
 		C4C0FA042192CD36004D7C94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0FA032192CD36004D7C94 /* ViewController.swift */; };
 		C4C0FA072192CD36004D7C94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C0FA052192CD36004D7C94 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C43A0DB62193EA6000E41B6C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C4C0F9FE2192CD36004D7C94 /* UngNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UngNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C0FA012192CD36004D7C94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4C0FA032192CD36004D7C94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 				C4C0FA012192CD36004D7C94 /* AppDelegate.swift */,
 				C4C0FA032192CD36004D7C94 /* ViewController.swift */,
 				C4C0FA052192CD36004D7C94 /* Main.storyboard */,
+				C43A0DB62193EA6000E41B6C /* RegisterViewController.swift */,
 				C4C0FA082192CD38004D7C94 /* Assets.xcassets */,
 				C4C0FA0A2192CD38004D7C94 /* LaunchScreen.storyboard */,
 				C4C0FA0D2192CD38004D7C94 /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43A0DB72193EA6000E41B6C /* RegisterViewController.swift in Sources */,
 				C4C0FA042192CD36004D7C94 /* ViewController.swift in Sources */,
 				C4C0FA022192CD36004D7C94 /* AppDelegate.swift in Sources */,
 			);

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UngNumber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="BYZ-38-t0r" customClass="ViewController" customModule="UngNumber" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
                                 <rect key="frame" x="51" y="418" width="136" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="136" id="8Oy-Nx-7ct"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="8Oy-Nx-7ct"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sign In">
@@ -71,12 +71,15 @@
                                 <rect key="frame" x="188" y="418" width="135" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="u9R-bh-iwG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="u9R-bh-iwG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ft8-FD-de1" kind="show" id="I3w-OC-WeC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,9 +108,54 @@
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="22.906403940886701"/>
         </scene>
+        <!--Register-->
+        <scene sceneID="vcO-I2-bXa">
+            <objects>
+                <viewController title="Register" id="Ft8-FD-de1" customClass="RegisterViewController" customModule="UngNumber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R2s-CF-IX4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wallpaper2" translatesAutoresizingMaskIntoConstraints="NO" id="qaO-fm-y9r">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aga-Vj-n8j">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="2mA-RR-O0h">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="ArrowBack" id="sVf-W4-33H">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="hjD-ga-3SR"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qaO-fm-y9r" firstAttribute="trailing" secondItem="jXr-5f-cJk" secondAttribute="trailing" id="HqQ-SD-sjf"/>
+                            <constraint firstItem="Aga-Vj-n8j" firstAttribute="trailing" secondItem="jXr-5f-cJk" secondAttribute="trailing" id="WUM-VU-2eE"/>
+                            <constraint firstItem="Aga-Vj-n8j" firstAttribute="top" secondItem="jXr-5f-cJk" secondAttribute="top" id="Xya-Fu-xny"/>
+                            <constraint firstItem="qaO-fm-y9r" firstAttribute="leading" secondItem="jXr-5f-cJk" secondAttribute="leading" id="dt9-N5-I2I"/>
+                            <constraint firstItem="qaO-fm-y9r" firstAttribute="top" secondItem="jXr-5f-cJk" secondAttribute="top" id="iOe-5L-8WT"/>
+                            <constraint firstItem="Aga-Vj-n8j" firstAttribute="leading" secondItem="jXr-5f-cJk" secondAttribute="leading" id="p36-b9-6Y3"/>
+                            <constraint firstItem="qaO-fm-y9r" firstAttribute="bottom" secondItem="jXr-5f-cJk" secondAttribute="bottom" id="rgo-f3-jhd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jXr-5f-cJk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15R-Ax-fVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="22.906403940886701"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ArrowBack" width="108" height="108"/>
         <image name="Logo" width="128" height="128"/>
         <image name="Wallpaper" width="3024" height="4032"/>
+        <image name="Wallpaper2" width="5760" height="3840"/>
     </resources>
 </document>
