@@ -14,6 +14,8 @@ class RegisterViewController: UIViewController {
     var nameString: String?
     var userString: String?
     var passwordString: String?
+    var myClass = MyClass()
+    
     
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -44,9 +46,46 @@ class RegisterViewController: UIViewController {
         print("myUserStrign ==> \(myUserString)")
         print("myPasswordStrign ==> \(myPasswordString)")
         
+//        Check Space
+        if checkSpace(myName: myNameString, myUser: myUserString, myPassword: myPasswordString) {
+            print("Have Space")
+            myAlertDialog(titleString: myClass.titleHaveSpace, messageString: myClass.messageHaveSpace)
+        }   else {
+            print("No Space")
+            addUserToServer(myName: myNameString, myUser: myUserString, myPassword: myPasswordString)
+        }
         
         
     }   // cloudUpload
+    
+    func addUserToServer(myName: String, myUser: String, myPassword: String) -> Void {
+        
+        let urlString: String = myClass.findUrlAddUser(myName: myName, myUser: myUser, myPassword: myPassword)
+        print("urlString ==> \(urlString)")
+        
+        
+    }   // addUser
+    
+    
+    func myAlertDialog(titleString: String, messageString: String) -> Void {
+        let alert = UIAlertController(title: titleString, message: messageString, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    
+    func checkSpace(myName: String, myUser: String, myPassword: String) -> Bool {
+        var resultBool: Bool = false
+        
+        if (myName.count == 0) || (myUser.count == 0) || (myPassword.count == 0) {
+            resultBool = true
+        }
+        
+        return resultBool
+    }
     
     
     
