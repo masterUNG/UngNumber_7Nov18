@@ -66,6 +66,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="singInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIN-tA-KQD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZE-6v-dM6">
                                 <rect key="frame" x="188" y="418" width="135" height="30"/>
@@ -103,6 +106,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="23P-Lm-f4b" id="mJI-lw-iuX"/>
+                        <outlet property="userTextField" destination="TIB-jK-azi" id="Epn-HT-6pn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

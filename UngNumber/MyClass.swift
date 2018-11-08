@@ -15,6 +15,8 @@ class MyClass {
     let messageHaveSpace: String = "Please Fill Every Blank"
     let preUrlAddUser: String = "https://www.androidthai.in.th/tar/addUserMaster.php?isAdd=true&Name="
     let columnStrings = ["&User=", "&Password="]
+    let preUrlGetJson = "https://www.androidthai.in.th/tar/getDataWhereUserMaster.php?isAdd=true&User="
+    
     
     
     
